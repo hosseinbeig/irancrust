@@ -1,12 +1,14 @@
-// server
+//  server
 const express = require('express');
 // database
 const connentDB = require('./config/db');
+const app = express();
 
 // connect to DB
 connentDB();
 
-const app = express();
+// init middleware
+app.use(express.json({ extended: false }));
 
 app.get('/', (req, res) => res.send('API Running'));
 
