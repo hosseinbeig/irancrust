@@ -1,8 +1,11 @@
 //  server
 const express = require('express');
+
 // database
 const connentDB = require('./config/db');
+
 const app = express();
+//
 
 // connect to DB
 connentDB();
